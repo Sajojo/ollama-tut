@@ -47,16 +47,18 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     
 5.  Next we want to recreate the AI using the modelfile that we just modified
     run
+
     `ollama create mario -f mario.modelfile`
     then check with
+
     `ollama list`
 
     it should show something like
     ```NAME              ID              SIZE      MODIFIED
-       mario:latest      9d2558eab56b    4.7 GB    3 minutes ago
-    ```   
+       mario:latest      9d2558eab56b    4.7 GB    3 minutes ago```   
     
     run
+
     `ollama run mario`
 
     Enjoy!
