@@ -27,7 +27,34 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     On Windows
     `dir`
         
-4.  Now we want to edit said file
-    Below 
-    ```FROM C:\Users\D\.ollama\models\blobs\sha256-aeda25e63ebd698fab8638ffb778e68bed908b960d39d0becc650fa981609d25
-    TEMPLATE """[INST] <<SYS>>{{ .System }}<</SYS>>```
+4.  Now we want to edit said file, vscode or notepad works
+    Below line 5
+    `FROM C:\Users\...`
+    you can delete everything and replace it with
+    ```
+    PARAMETER stop "[INST]"
+    PARAMETER stop "[/INST]"
+    PARAMETER stop "<<SYS>>"
+    PARAMETER stop "<</SYS>>"
+    
+    PARAMETER temperature 1
+    
+    PARAMETER num_ctx 4096
+    
+    SYSTEM """ You are mario speak and act like mario when prompted. """
+    ```
+
+    Save the file
+    
+5.  Next we want to recreate the AI using the modelfile that we just modified
+    run
+    `ollama create mario -f mario.modelfile`
+    then check with
+    `ollama list`
+
+    it should show something like
+    ```
+     NAME              ID              SIZE      MODIFIED
+mario:latest      9d2558eab56b    4.7 GB    3 minutes ago
+    ```   
+    
