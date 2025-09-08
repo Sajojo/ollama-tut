@@ -31,8 +31,7 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     Below line 5
     `FROM C:\Users\...`
     you can delete everything and replace it with
-    ```
-    PARAMETER stop "[INST]"
+    ```PARAMETER stop "[INST]"
     PARAMETER stop "[/INST]"
     PARAMETER stop "<<SYS>>"
     PARAMETER stop "<</SYS>>"
@@ -43,7 +42,7 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     
     SYSTEM """ You are mario speak and act like mario when prompted. """
     ```
-
+    
     Save the file
     
 5.  Next we want to recreate the AI using the modelfile that we just modified
