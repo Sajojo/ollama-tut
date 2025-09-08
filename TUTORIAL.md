@@ -1,6 +1,6 @@
 # Tutorial: Installing Ollama on Your Local Device
 
-Welcome! This guide will help you install Ollama on your local machine. Follow the steps below to get started.
+This guide will help you install Ollama on your local machine. Follow the steps below to get started.
 
 ---
 
