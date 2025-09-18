@@ -30,8 +30,7 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     Below line 20
     `PARAMETER temperature 1`
     you can delete everything and replace it with
-    ``` SYSTEM """ You are mario speak and act like mario when prompted. """
-    ```
+    ```SYSTEM """ You are mario speak and act like mario when prompted. """```
     
     Save the file.
     
