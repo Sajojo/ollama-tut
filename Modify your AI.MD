@@ -13,11 +13,11 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
 
 2.  `ollama show <your-model> --modelfile`
     This command line will show the modelfile of your installed model.
-    For the sake of this example let's use "llama3"
-    `ollama show llama3 --modelfile`
+    For the sake of this example let's use "gemma3"
+    `ollama show gemma3 --modelfile`
 
 3.  Next let's make a file called "mario.modelfile"
-    `ollama show llama3 --modelfile > mario.modelfile`
+    `ollama show gemma3 --modelfile > mario.modelfile`
     Now you will have a mario.modelfile in your current directory
 
     To check:
@@ -27,19 +27,10 @@ Take the existing the LLM model, and use the modelfile to modify the behaviour o
     `dir`
         
 4.  Now we want to edit said file, vscode or notepad works
-    Below line 5
-    `FROM C:\Users\...`
+    Below line 20
+    `PARAMETER temperature 1`
     you can delete everything and replace it with
-    ```PARAMETER stop "[INST]"
-    PARAMETER stop "[/INST]"
-    PARAMETER stop "<<SYS>>"
-    PARAMETER stop "<</SYS>>"
-    
-    PARAMETER temperature 1
-    
-    PARAMETER num_ctx 4096
-    
-    SYSTEM """ You are mario speak and act like mario when prompted. """
+    ``` SYSTEM """ You are mario speak and act like mario when prompted. """
     ```
     
     Save the file.
